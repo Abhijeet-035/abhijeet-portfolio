@@ -96,12 +96,12 @@ export const projects = [
     demo: "#"
   },
   {
-    title: "Waste to Wealth",
-    category: "AI / Blockchain",
+    title: "Retail Store Sample App",
+    category: "DevOps / Cloud",
     description:
-      "A sustainable waste-management concept combining data, AI and blockchain technologies to improve waste handling and resource utilization.",
-    stack: ["Python", "AI", "Blockchain", "Data"],
-    github: "#",
+      "A cloud-native retail application built with microservices and deployed on Amazon EKS using Docker, Kubernetes, Terraform and GitOps practices.",
+    stack: ["AWS EKS", "Docker", "Kubernetes", "Terraform", "GitHub Actions", "Argo CD", "Helm"],
+    github: "https://github.com/Abhijeet-035/retail-store-sample-app",
     demo: "#"
   }
 ];

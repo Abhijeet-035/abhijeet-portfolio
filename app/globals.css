@@ -177,6 +177,14 @@ button {
   z-index: 2;
 }
 
+.hero-profile {
+  order: 1;
+}
+
+.hero-content {
+  order: 2;
+}
+
 .eyebrow {
   color: var(--primary);
   font: 700 12px "JetBrains Mono", monospace;
@@ -188,10 +196,6 @@ button {
   font-size: clamp(48px, 6vw, 76px);
   line-height: 1;
   letter-spacing: -4px;
-  color: #10183a;
-}
-
-html[data-theme="dark"] .hero h1 {
   color: var(--text);
 }
 
@@ -299,27 +303,24 @@ html[data-theme="dark"] .hero h1 {
 }
 
 .profile-circle {
-  width: min(360px, 75vw);
+  width: min(390px, 75vw);
   aspect-ratio: 1;
+  padding: 8px;
   border-radius: 50%;
-  display: grid;
-  place-items: center;
-  background: linear-gradient(145deg, var(--accent), #ffae00);
-  border: 8px solid rgba(255, 255, 255, .8);
-  box-shadow: 0 25px 70px rgba(0, 0, 0, .16);
+  background: linear-gradient(145deg, #ffffff, #dcd2ff);
+  box-shadow:
+    0 0 0 8px rgba(91, 43, 224, .08),
+    0 25px 70px rgba(60, 30, 150, .18);
   animation: float 4s ease-in-out infinite;
 }
 
-.profile-initials {
-  width: 75%;
-  height: 75%;
-  display: grid;
-  place-items: center;
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  display: block;
   border-radius: 50%;
-  background: var(--primary);
-  color: white;
-  font: 800 clamp(50px, 8vw, 100px) "JetBrains Mono", monospace;
-  box-shadow: inset 0 0 0 8px rgba(255, 255, 255, .15);
+  object-fit: cover;
+  object-position: 50% 35%;
 }
 
 @keyframes float {
@@ -392,15 +393,21 @@ html[data-theme="dark"] .hero h1 {
 }
 
 .avatar {
-  width: 85px;
-  height: 85px;
+  width: 105px;
+  height: 105px;
   flex: 0 0 auto;
-  display: grid;
-  place-items: center;
+  overflow: hidden;
   border-radius: 14px;
-  background: var(--primary);
-  color: white;
-  font: 800 25px "JetBrains Mono", monospace;
+  background: var(--surface-2);
+  border: 2px solid rgba(91, 43, 224, .15);
+}
+
+.about-photo {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: 50% 35%;
 }
 
 .about-card h3 {
@@ -976,7 +983,7 @@ footer p,
   }
 
   .profile-circle {
-    width: 220px;
+    width: 240px;
   }
 
   .about-card {

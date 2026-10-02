@@ -213,7 +213,11 @@ export default function Home() {
           transition={{ duration: 0.9 }}
         >
           <div className="profile-circle">
-            <div className="profile-initials">AK</div>
+            <img
+              src="/abhijeet-profile.jpg"
+              alt="Abhijeet Kumar"
+              className="profile-photo"
+            />
           </div>
         </motion.div>
       </section>
@@ -232,7 +236,13 @@ export default function Home() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <div className="avatar">AK</div>
+            <div className="avatar">
+              <img
+                src="/abhijeet-profile.jpg"
+                alt="Abhijeet Kumar"
+                className="about-photo"
+              />
+            </div>
 
             <div>
               <h3>Analyst & Tech Enthusiast</h3>
